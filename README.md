@@ -19,7 +19,7 @@ git --no-pager branch -r                            # Visualizando somente branc
 
 # Buscando ancestral comum e diferencas
 git --no-pager merge-base origin/master origin/suporte           
-git --no-pager diff origin/master origin/suporte    
+git --no-pager diff --name-only origin/master origin/suporte    
 git rev-list --count origin/suporte..origin/master
 git rev-list --count origin/master..origin/suporte
 ```
