@@ -5,17 +5,21 @@ Esse projeto foi feito para testar alguns comandos gits e seus efeitos em branch
 # Comandos uteis
 
 ```bash
+# Logs
 git log --online
-git --no-pager log --oneline
+git --no-pager log --oneline origin/master
+git --no-pager log --oneline origin/suporte
 git log -n 5 --oneline
 git log --stat
 git log --since="2 weeks ago"
 
+# Buscando branhcs
+git --no-pager branch -a                            # Visualizando todas as branchs
+git --no-pager branch -r                            # Visualizando somente branchs remotas
 
-git --no-pager branch -a                    # Visualizando todas as branchs
-git --no-pager branch -r                    # Visualizando somente branchs remotas
-
-git --no-pager merge-base master suporte    # Acha o ancestral comum entre essas branchs
-git rev-list --count suporte..master
-git rev-list --count master..suporte
+# Buscando ancestral comum e diferencas
+git --no-pager merge-base origin/master origin/suporte           
+git --no-pager diff origin/master origin/suporte    
+git rev-list --count origin/suporte..origin/master
+git rev-list --count origin/master..origin/suporte
 ```
